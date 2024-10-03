@@ -1,0 +1,25 @@
+<style>
+  .botao-link {
+      display: inline-block;
+      padding: 6.5px 17px;
+      background-color: #6d6d6d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+</style>
+<form class="c-form" action="{{ url_for('cliente.inserir_users') }}" method="post" >
+    <div class="mb-3">
+      <label class="form-label">Usuário</label>
+      <input type="text" class="form-control" name="user" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Senha</label>
+      <input type="password" class="form-control" name="senha" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Logar</button>
+    
+  
+    <a href="{{url_for('criacao.form_criar_user')}}" class="btn btn-secondary">Criar</a>
+</form>
